@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>The Legend of Nyvarra — Book</title>
+		<style>
+			:root {
+				--bg: #0f1113;
+				--paper: #f7f6f2;
+				--accent: #6b3f2b;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0;
+				font-family: Georgia, "Times New Roman", serif;
+				background: linear-gradient(180deg, #0b0b0c 0%, #141416 100%);
+				color: var(--paper);
+				-webkit-font-smoothing: antialiased;
+			}
+			.book {
+				max-width: 900px;
+				margin: 36px auto;
+				padding: 28px;
+				background: rgba(255, 255, 255, 0.04);
+				border-radius: 8px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+			}
+			header {
+				display: flex;
+				align-items: center;
+				gap: 18px;
+			}
+			header .title {
+				font-size: 28px;
+				line-height: 1;
+				color: var(--paper);
+			}
+			header .sub {
+				font-size: 13px;
+				color: #cfcac0;
+			}
+			.meta {
+				margin-top: 8px;
+				color: #bdb6a8;
+				font-size: 13px;
+			}
+
+			.map-wrap {
+				margin: 20px 0;
+				text-align: center;
+			}
+			.map-wrap img {
+				max-width: 100%;
+				height: auto;
+				border: 6px solid rgba(255, 255, 255, 0.05);
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+				border-radius: 6px;
+			}
+
+			nav.chapters {
+				display: flex;
+				gap: 8px;
+				flex-wrap: wrap;
+				margin: 10px 0;
+			}
+			nav.chapters a {
+				background: rgba(255, 255, 255, 0.03);
+				padding: 6px 10px;
+				border-radius: 5px;
+				color: var(--paper);
+				text-decoration: none;
+				font-size: 14px;
+			}
+
+			article.chapter {
+				background: var(--paper);
+				color: #111;
+				padding: 18px;
+				border-radius: 6px;
+				margin-top: 18px;
+			}
+			article.chapter h2 {
+				margin-top: 0;
+				color: var(--accent);
+				font-family: Georgia, "Times New Roman", serif;
+			}
+			article.chapter p {
+				line-height: 1.6;
+				margin: 12px 0;
+				color: #222;
+			}
+
+			footer {
+				margin-top: 18px;
+				color: #bfb6a8;
+				font-size: 13px;
+				text-align: center;
+			}
+			#region {
+				display: inline-flex;
+				gap: 10px;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+
+			#imageFrame {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 5px;
+			}
+
+			/* Very simple print-friendly tweaks */
+			@media print {
+				body {
+					background: white;
+					color: black;
+				}
+				.book {
+					box-shadow: none;
+				}
+				header .sub,
+				nav.chapters,
+				footer {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="book" role="main">
+			<header>
+				<div>
+					<div class="title">Lore of Shadows of Vornak</div>
+					<div class="meta">Part 1. In the Saga of Nyvarra.</div>
+				</div>
+			</header>
+
+			<div class="map-wrap" aria-hidden="false">
+				<img src="./images/worldmap.png" alt="Political map of Nyvarra" />
+				<div style="font-size: 12px; color: #cfc6b8; margin-top: 8px">
+					Figure: Political map of Nyvarra (simple preview)
+				</div>
+			</div>
+
+			<nav class="chapters" aria-label="Chapters">
+				<a href="#prologue">Prologue</a>
+				<a href="#realms">The Six Realms</a>
+				<a href="#temptation">Temptation of Ebony Ice</a>
+				<a href="#war">War of Ash & Silence</a>
+				<a href="#veilfall">The Veilfall</a>
+				<a href="#today1">Age of Kingdom of Men: Grundwyn</a>
+				<a href="#today2">Age of Kingdom of Men: Vornak</a>
+				<a href="#cadwin">Cadwin & Hollowfen</a>
+			</nav>
+
+			<article id="prologue" class="chapter">
+				<h2>Prologue — By the Camp Fire</h2>
+				<i>
+					Come closer to the fire, child, and listen well, for this is not a
+					tale of comfort, but a memory carved in blood and shadow. Long ago,
+					when the world was younger and the stars hung lower, there was a land
+					called Nyvarra…
+				</i>
+				<br />
+			</article>
+
+			<article id="realms" class="chapter">
+				<h2>The Six Realms</h2>
+				<div id="region">
+					<img style="width: 40%" src="./images/Grundwyn.jpg" />
+					<p>
+						<strong>🌳 Grundwyn — The Realm of Greenwood</strong> — In Grundwyn
+						dwelt the <b>Wood Elves</b>, proud and mighty in magic, their voices
+						weaving storms, their arrows faster than the wind. With them came
+						<b>the First Men</b>, castaways from distant seas, who bent knee to
+						elven lords and learned their ways. Together they forged uneasy
+						bonds: elves shaping sorcery from root and star, men shaping stone
+						and steel into fortresses beneath the green canopy.
+					</p>
+				</div>
+				<div id="region">
+					<p>
+						<strong>⛰️ Elenor — The Hollow Mountains</strong> — Elenor, the
+						hollow mountains, glittering with forges and deep halls. This was
+						the realm of the <b>Dwarves</b>, masters of craft. Few in number,
+						yet their armor gleamed like the sun, and their engines roared with
+						power no other race could match. Their cannons spat thunder, their
+						axes split stone, and their greed for the earth’s treasures was as
+						endless as the mines they dug.
+					</p>
+					<img style="width: 40%" src="./images/Elanor.jpg" />
+				</div>
+				<div id="region">
+					<img style="width: 40%" src="./images/Vornak.jpg" />
+					<p>
+						<strong>🐉 Vornak — The Drowned Realm</strong> — Vornak, the drowned
+						swamps, steaming with mist and secrets. Here, among black waters and
+						tangled roots, the <b>Goblins</b> reigned. Countless were their
+						numbers, fierce their spirit. They knew the herbs that could cheat
+						death itself, plucking life back from the edge of the grave.
+					</p>
+				</div>
+
+				<p>
+					<strong>❄️ Skjölend — The Frozen Edge </strong> — Skjölend, the frozen
+					isles at the world’s edge. A land of eternal frost, where
+					<b>Giants</b>
+					strode, vast and terrible, alongside mammoths and white bears born of
+					the ice. It was a place of titans, where storms howled like living
+					beasts, and only the strong endured. Those who walked Skjölend carried
+					the strength of the mountain in their bones — though now, their kind
+					has vanished into legend, leaving only empty peaks and whispers in the
+					snow.
+				</p>
+				<p>
+					<strong>☀️ Dun’vahr — The Golden Expanse</strong> — Dun’vahr, a sea of
+					golden sand, vast and empty beneath the burning sun. The coasts were
+					not empty though. There, hidden among jagged cliffs and salt caves,
+					<b>smugglers and pirates</b> carved their lairs. They were wolves
+					without a master, striking at passing ships, vanishing into the sands.
+					Dun’vahr was no empire — only a wound in the world, a place of pirates
+					and thieves.
+				</p>
+				<div id="region">
+					<p>
+						<strong
+							>🌑 The Shattered Shoals — The Realm of the Dark Elves</strong
+						>
+						— And last, <b>The Shattered Shoals</b> — broken coasts and jagged
+						isles, forever lashed by storm and sea. Here ruled the
+						<b>Dark Elves</b>, cloaked in silence. Their black spires clung to
+						cliffs of obsidian, their eyes turned ever inward, guarding a secret
+						greater than kingdoms: the <b>Ebony Ice</b>.
+						<br />
+						This crystal was no mere stone, but the soul of eternity. It drank
+						the spirits of the dead and bound them within its frozen heart,
+						granting power unending — power to forge weapons that burned with
+						soul-fire, to shape machines that defied nature itself. Yet each
+						shard whispered madness, corrupting all who dared wield it. Only the
+						Dark Elves could master it. Only they could guard it. And guard it
+						they did, in cold silence, while the other realms schemed and bled.
+					</p>
+					<img style="width: 40%" src="./images/Ozvark.jpg" />
+				</div>
+				<div id="region">
+					<div id="imageFrame">
+						<img style="width: 200px" src="./images/OzvarkElf.jpg" />
+						<small>Fig: The High Maester Ozvark</small>
+					</div>
+
+					<div id="imageFrame">
+						<img style="width: 75%" src="./images/Guardian of sholes.jpg" />
+						<small>Fig: Dark elf council at The Shattered Shoals.</small>
+					</div>
+				</div>
+			</article>
+
+			<article id="temptation" class="chapter">
+				<h2>The Temptation of Ebony Ice</h2>
+				<p>
+					And it was these pirates who first carried whispers of a strange black
+					crystal, taken from the Shattered Shoals. Whispers grew into rumors,
+					and rumors into fire — until across Nyvarra, kings and councils turned
+					their gaze toward the dark elf realm.
+				</p>
+				<p>
+					<b>The Wood Elves of Grundwyn</b>, masters of sorcery, grew restless.
+					Proud and but not eternal, they dreamed of wielding Ebony Ice to bend
+					life and death itself, to command storms, to reign without end. To
+					them, it was not treasure — it was destiny.
+				</p>
+				<p>
+					<b>The First Men</b>, a small host of exiles dwelling beneath the
+					Elves’ boughs, weaker than all others yet fierce in spirit, saw in the
+					Ice a chance to carve themselves into history. They dreamed of
+					returning to their lost heartland with weapons unstoppable, and to
+					avenge the shame of their exile.
+				</p>
+				<p>
+					<b>The Goblins of Vornak</b>, countless as swarms, hungered for it as
+					an ingredient of immortality. To them, it was not crystal but a seed —
+					a seed to graft into their herbs and brews, to make flesh endure
+					beyond time, to cheat death itself.
+				</p>
+				<p>
+					<b>The Dwarves of Elenor</b>, proud lords of forge and stone, hungered
+					with a fire unlike the rest. To them, the Ebony Ice was not treasure
+					but fuel — the ultimate heart for their engines of war, a spark to
+					turn their forges into suns. They dreamed of earth-eaters, iron
+					leviathans that could grind mountains to dust and march with armies of
+					flame. In their secret councils, they whispered of
+					<b>Skjölend</b> itself, and how one day their machines would devour
+					even the frozen isles for more earth to feed their hunger.
+				</p>
+				<p>
+					Each race saw in the Ice crystals not what it was, but what they
+					desired most.
+				</p>
+				<p>
+					And so, though they were never friends, they forged an
+					<b>alliance of greed</b>.
+				</p>
+				<i>
+					<blockquote>
+						“Why,” they whispered, “should such power lie in the hands of one
+						realm, when together we can seize it? The Dark Elves are few,
+						silent, withdrawn. Let us strike as one, and the Ebony Ice will be
+						ours to share.”
+					</blockquote>
+				</i>
+				<div id="imageFrame">
+					<img style="width: 500px" src="./images/The Covenant of Greed.jpg" />
+					<small>Fig: The Covenant of Greed</small>
+				</div>
+				<p>
+					Thus was born the <b>doomed covenant</b> — Goblins, Dwarves, Wood
+					Elves, and First Men bound by a single dream: to wrest the heart of
+					eternity from the Shoals.
+				</p>
+				<p>And in their unity was planted the seed of their ruin.</p>
+			</article>
+
+			<article id="war" class="chapter">
+				<h2>The War of Ash and Silence</h2>
+				<p>
+					So it began — Goblins, Dwarves, Wood Elves, and the First Men — bound
+					themselves in oath, swearing to seize the Ebony Ice from the Dark
+					Elves of the Shoals. <br />They called it a pact of hope. <br />But
+					the world remembers it as a covenant of doom.
+				</p>
+
+				<div id="imageFrame">
+					<img style="width: 500px" src="./images/the march.jpg" />
+					<small>Fig: The march</small>
+				</div>
+
+				<h3>🌳 The Wrath of the Wood Elves</h3>
+				<p>
+					First to strike were the <b>Wood Elves of Grundwyn</b>. With voices
+					raised in sorcery, they called tempests to shatter cliffs and forests
+					of thorn to pierce stone walls. Lightning danced upon their arrows,
+					storms obeyed their command. Their pride was fire, and their fire
+					burned brightest of all.
+				</p>
+				<p>
+					Yet with every spell, the Ebony Ice stirred. The air grew heavy. The
+					earth grew weary. And in their triumphs, they sowed their undoing.
+				</p>
+				<h3>🪓 The Thunder of the Dwarves</h3>
+				<p>
+					Beside them marched the <b>Dwarves of Elenor</b>, clad in armor that
+					gleamed like dawn, engines of war roaring like thunder. Their forges
+					birthed cannons that could crack a mountain, and earth-eaters that
+					tore through fortresses like paper.
+				</p>
+				<div id="region">
+					<div id="imageFrame">
+						<img style="width: 200px" src="./images/seige begin.jpg" />
+						<small>Fig: The Seige</small>
+					</div>
+					<p>
+						They struck the Shoals with fire and iron, but for every stone they
+						shattered, the sea swallowed more. And in their greed, the Dwarves
+						dug too deep into the crystal veins. Their engines drank of the Ice,
+						and when they roared, they roared with the screams of the damned.
+					</p>
+				</div>
+
+				<h3>🐉 The Endless Horde of the Goblins</h3>
+				<p>
+					From the swamps of Vornak came the <b>Goblins</b>, a tide without end.
+					Ten thousand, twenty, more — they poured upon the Shoals like locusts.
+					Their shamans brewed Ebony Ice into their potions, and for a time they
+					fought as demons, tireless, fearless, immortal.
+				</p>
+				<p>
+					But immortality was a lie. The Ice consumed them. Flesh twisted, eyes
+					burned, souls unraveled. What had been a horde became a plague of
+					madness. The Shoals were drowned in their screams.
+				</p>
+				<h3>⚔️ The Desperation of the First Men</h3>
+				<p>
+					And last came the <b>First Men</b>. Few in number compared to the
+					others, yet burning with fury. They carried no sorcery, no engines, no
+					potions — only steel and unyielding will. They struck at night,
+					desperate to prove themselves, desperate to carve a name.
+				</p>
+				<p>
+					For a moment, it seemed they would. For a moment, the First Men stood
+					upon the cliffs of the Shoals, Ebony Ice glittering in their reach.
+					But the closer they came, the heavier their hearts grew, as though the
+					crystal weighed upon their very souls.
+				</p>
+				<p>
+					And when the Dark Elves came, the First Men were the first to break.
+				</p>
+				<h3>🌑 The Silence Descends</h3>
+				<p>
+					From the black cliffs they emerged: the
+					<b>Dark Elves of the Shoals</b>. Cloaked in silence, their eyes like
+					cold stars, they descended not as an army but as judgment itself. They
+					wielded no banners, sang no songs. Their blades carved through
+					enchantment, their shadows swallowed flame.
+				</p>
+				<p>
+					Against them, the alliance shattered. Goblins turned upon Goblins,
+					Dwarves’ engines crumbled, Elves fell screaming to their own storms.
+					The First Men fled across the sea, their ships vanishing into mist.
+				</p>
+				<p>And when the silence lifted, the war was ended.</p>
+				<hr />
+				<h3>🕯️ The Ashes of Alliance</h3>
+				<p>
+					The <b>Goblins</b> were broken, back in Vornak, their burrows cursed
+					and filled with darker things. The <b>Dwarves</b> were undone, their
+					halls hollow and haunted. The <b>Wood Elves</b> scattered, never again
+					to gather in such strength. The <b>First Men</b> vanished into the
+					mist, leaving only one bloodline — House Hornn — to return in later
+					ages
+				</p>
+				<p>
+					The land itself bore scars: forests turned to cinders, mountains
+					split, seas fouled with ash. For a hundred years, Nyvarra starved
+					beneath the shadow of what its peoples had unleashed.
+				</p>
+				<p>
+					And so it was named <b><i>"The War of Ash and Silence"</i></b
+					>. Ash, for the ruin it left. Silence, for the judgment of the Dark
+					Elves, who spoke no word but ended all with gaze.
+				</p>
+				<h3>🌫️ The Treaty of Ozvark</h3>
+				<p>
+					When the slaughter was done, <b>Ozvark</b> the
+					<i>High Maester of the Dark Elven council</i> summoned what remained
+					of the broken Kings and Queens. Upon the cliffs of the Shoals, he
+					compelled them to swear a covenant: never again would the realms raise
+					war upon The Shatterd Shoals.
+				</p>
+				<p>
+					Those who broke this oath, he warned, would not merely fall — they
+					would vanish from memory, their names stripped from song and stone
+					alike.
+				</p>
+				<p>
+					Thus the Shattered Shoals became <b>Ozvark</b>, and its name was
+					written in silence upon every tongue.
+				</p>
+				<p>
+					The War of Ash and Silence left not only corpses and ruins — it left
+					scars upon the very bones of Nyvarra. What followed was an age darker
+					still, known in song and dread as…
+				</p>
+			</article>
+
+			<article id="veilfall" class="chapter">
+				<h2>The Veilfall Period</h2>
+				<div id="region">
+					<p>
+						When the Ebony Ice cracked beneath blood and greed, it screamed. Its
+						shards drank deep of souls, then bled them back into the world like
+						a wound that would not heal.
+						<br />
+						Forests charred, rivers turned black, carrying whispers instead of
+						water.<br />
+						Mountains groaned as if alive, pale shadows that walked like men.
+						<br />
+						This was the <b>Veilfall period</b>, an age when the veil between
+						living and dead tore open.
+					</p>
+					<div id="imageFrame">
+						<img style="width: 300px" src="./images/crack.jpg" />
+						<small>Fig: Ebony ice cracking</small>
+					</div>
+				</div>
+
+				<hr />
+				<h3>👹 The Goblins’ Curse</h3>
+				<p>
+					The Goblins, who had once been endless as the reeds of Vornak, were
+					the first to suffer. Their burrows, swollen with Ebony Ice, became
+					maws of horror. From the dark pits came creatures not Goblin, not
+					beast, not even of Nyvarra. The few survivors fled into swamps,
+					dwindling, becoming shadows of the hordes they once were.
+				</p>
+				<p>
+					Some say even now, in the deepest mire of Vornak, you can hear the
+					echoes of their madness — Goblin voices still howling for a death that
+					never comes.
+				</p>
+				<h3>🪓 The Empty Halls of Elenor</h3>
+
+				<div id="region">
+					<div id="imageFrame">
+						<img style="width: 300px" src="./images/vielfall dwarves.png" />
+						<small>Fig: Empty dwarven halls</small>
+					</div>
+					<p>
+						The Dwarves of Elenor fared no better. Their engines cracked, their
+						forges grew cold. The Ebony Ice they had stolen cursed their
+						mountain halls. Whispers haunted the tunnels, and flame itself
+						turned treacherous, burning those who struck the anvils.
+						<br /><br />One by one, the Dwarves vanished into the dark. Some
+						claim they were consumed by their own machines, others that they
+						became stone themselves, forever bound to their broken halls. Now
+						Elenor stands hollow, its gates sealed, its treasures left to dust.
+					</p>
+				</div>
+
+				<h3>🌳 The Scattered Wood Elves</h3>
+				<p>
+					The Wood Elves, proudest of all, scattered like leaves in storm. Many
+					perished, undone by the very sorcery they had unleashed. Others fled
+					into exile, wandering for generations.
+				</p>
+				<p>
+					Some drifted north, seeking the frost of Skjölend for refuge. Others
+					crept east, hiding in forgotten groves. Only a handful endured in
+					Elenor’s shadowed woods, clinging to what little remained of their
+					once-great dominion.
+				</p>
+				<p>They remember still — and they do not forgive.</p>
+				<h3>⚔️ The Last of the First Men</h3>
+
+				<div id="region">
+					<p>
+						The First Men fled before the silence of the Dark Elves, their ships
+						vanishing into the deep east. For centuries, they were thought lost,
+						their memory fading like smoke. But the blood of the First Men
+						endured <br />
+						Three generations later, their descendants returned with sails ember
+						like dusk, bearing iron and fire. From their line rose
+						<b>House Hornn</b>, proud and fierce, the last of the First Men.
+						They claimed a part of the eastern coasts of Grundwyn, and to this
+						day, their banners whisper of that exile — and their vow to never
+						knee
+					</p>
+					<div id="imageFrame">
+						<img style="width: 300px" src="./images/last ship.jpg" />
+						<small>Fig: The last ship</small>
+					</div>
+				</div>
+				<h3>❄️ The Giants’ Lament</h3>
+				<p>
+					And in Skjölend, the Giants suffered though they had never joined the
+					war. The world’s wounding struck even them: glaciers cracked, beasts
+					vanished, storms grew endless. Slowly, the Giants dwindled. Some
+					vanished into the ice, others strode into the sea and did not return.
+				</p>
+				<p>
+					Now Skjölend inhabits, a very few sailors and adventurers who settled
+					from far western fjords.
+				</p>
+				<h3>🌑 The Shadow of Ozvark</h3>
+				<p>
+					And what of the Dark Elves? They returned to their Shoals, now renamed
+					<b>Ozvark</b>, named after their last high maester and the leader of
+					the dark elves at war. Their gates closed for others in the world.
+					They spoke no word, sent no emissaries. The Ebony Ice crystals still
+					pulsed in their cliffs.
+				</p>
+				<p>
+					The realms feared them, and in time, the fear became legend. Mothers
+					told their children:
+					<i
+						>do not wander too far, or the Dark Elves of Ozvark will take
+						you.</i
+					>
+				</p>
+				<p>
+					Yet the truth was far darker: the Dark Elves had no need to leave. For
+					the Ebony Ice still bled, and the world itself fed them.
+				</p>
+				<hr />
+				<h3>🌒 Thirteen Generations of Silence</h3>
+				<p>
+					For six hundred years after the Veilfall period, Nyvarra limped on.
+					The ancient civilizations were gone, their ruins left to crumble. In
+					their place rose new settlers, smugglers, pirates, and would-be kings.
+				</p>
+				<p>
+					Houses grew from nothing — some cunning, some cruel, all eager to
+					carve dominion from the bones of giants. Trade replaced empire, steel
+					replaced sorcery. Yet in every hall, in every tavern, the songs of the
+					War of Ash and Silence still lingered, a reminder that the shadow of
+					Ozvark had not faded.
+				</p>
+				<p>
+					And so, though the Dark Elves had not stirred for an age, all men
+					feared the day they would.
+				</p>
+				<p>
+					🔥 Thus ended the Veilfall, and thus began the
+					<b>Age of the kingdoms of men</b> — weak in comparison to the
+					ancients, yet reckless greedy for more power.
+				</p>
+			</article>
+
+			<article id="today1" class="chapter">
+				<h2>🦅 Grundwyn: The Hungry Realm</h2>
+				<p>
+					Six centuries after the Veilfall, Grundwyn rose from the ashes
+					stronger than any other. It was a realm of ambition — of men who
+					traded sorcery for steel, and kinship for conquest. The First Men had
+					long since returned across the sea, and from their bloodline came
+					House Hornn, whose strength and cunning made them the pillar of
+					Grundwyn’s power.
+				</p>
+				<p>
+					But Grundwyn was no single voice. It was a chorus of rival houses,
+					each clutching at power, each hungry for dominion. They shared one
+					trait above all: greed. Their hills were fertile, their ports busy,
+					yet their lords whispered of more — more land, more slaves, more
+					wealth.
+				</p>
+
+				<h3>The Temptation of Vornak</h3>
+				<p>And so their gaze turned southward, toward <b>Vornak</b>.</p>
+				<p>
+					Vornak, drowned in swamps and fog, was weaker, poorer, a land where
+					superstition clung like mist. Its people were mocked as swamp-born,
+					yet their herbs were priceless, said to heal wounds that should kill,
+					to drag men back from the threshold of death itself.
+				</p>
+				<p>
+					To Grundwyn’s greedy houses, this was no land of mystery. It was a
+					prize.
+				</p>
+				<p>
+					Yet they did not rush in blindly. They remembered well the old songs —
+					of swamps that swallowed armies, of shadows that struck by night, of
+					defenders who knew every reed and root. Vornak was poor, yes. But it
+					was also perilous. To take it meant bleeding for every inch.
+				</p>
+				<h3>⚔️ A Divided Predator</h3>
+				<p>
+					Here lies the bitter irony: <b>Grundwyn could crush Vornak</b>, were
+					its houses united. But Grundwyn is never united. Its noble families
+					gnaw at each other like wolves, each scheming for the throne, each
+					dreaming of glory greater than its rivals.
+				</p>
+				<p>
+					Civil war festers within its borders. Alliances are made and broken in
+					a season. Blades meant for foreign foes often turn first upon kin.
+				</p>
+				<p>
+					Thus Vornak survives, not by strength alone, but by the divisions of
+					its enemy.
+				</p>
+				<h3>👑 The Warning of House Hornn</h3>
+				<p>
+					Only <b>House Hornn</b> remembers what unity might bring. They alone
+					know the old power of the Wood Elves, for they once fought beside —
+					and against — them in the War of Ash and Silence. They whisper caution
+					in Grundwyn’s courts, reminding the greedy lords that Elenor’s forests
+					still hide watchful eyes, that Elves do not forgive, and that war with
+					them could end in ruin.
+				</p>
+				<p>
+					But when the talk turns to Vornak, House Hornn grows silent. For they
+					too know its swamps hold no vengeance but men — men who bleed, men who
+					can be broken.
+				</p>
+				<p>
+					And so the hungry lords sharpen their knives and whisper:
+					<i
+						>Let us take Vornak first. Its herbs, its swamps, its people. Then
+						let us feast on richer prey</i
+					>.
+				</p>
+			</article>
+
+			<article id="today2" class="chapter">
+				<h2>👑 The Throne of Vornak</h2>
+				<p>
+					In the heart of Vornak, where the swamps gave way to misty highlands
+					and black oaks tangled like the fingers of the dead, stood the throne
+					of the kingdom. It was carved not from gold or marble, but from the
+					ancient heartwood of a willow tree that had withstood fire, flood, and
+					famine. The people called it the <b>Weeping Throne</b> — for when the
+					moonlight struck it, sap glistened like tears along its grain.
+				</p>
+				<p>
+					Upon this throne sat <b>King Althar Willowen</b>, last of his line, a
+					weary man whose crown weighed heavier with every passing season.
+					Althar had ruled for forty years, and in those years he had seen
+					Vornak bled dry by raids from Grundwyn, treachery among its own lords,
+					and the endless slow death of his people’s faith.
+				</p>
+				<p>
+					Yet it was not foreign blades that haunted him most — it was time.
+				</p>
+				<h3>🌙 A Kingdom of Waiting</h3>
+				<p>
+					The King had no son, only a single daughter, the
+					<b>Princess Elanora</b>. She was wed to House Renfin, a family known
+					not for armies but for trade — rich, clever, and beloved in the
+					markets of Dun’vahr. By law, when Althar’s breath failed, the throne
+					would pass into Renfin hands.
+				</p>
+				<p>But not all of Vornak’s lords bowed quietly to this fate.</p>
+				<p>
+					Some were patient, waiting like wolves, their eyes fixed upon the
+					throne. Houses with bloodied swords and swelling militias, whispering
+					that Renfin’s merchants would shame the kingdom with treaties and coin
+					when what Vornak needed was war. They dreamed of seizing southern
+					Grundwyn’s fertile lands, of enslaving its farmers, of building an
+					empire from the bones of their enemy.
+				</p>
+				<p>
+					And so, while his rivals plotted ambition and conquest, the King
+					preached survival and peace. But peace is a fragile crown, and death
+					is a patient usurper.
+				</p>
+			</article>
+
+			<article id="cadwin" class="chapter">
+				<h2>🌑 The Ballad of Cadwin Morrath</h2>
+				<p>
+					In the northern swamps of Vornak, where the mists curl low and the
+					willows bend heavy with sorrow, there once stood <b>House Morrath</b>.
+					Wealthy merchants, lords of herbs and marshland, they were respected
+					by allies and envied by rivals.
+				</p>
+				<p>
+					Cadwin, youngest son of Lord Morrath, was unlike his kin. Where his
+					father and elder brother dreamed of silver, steel, and land, Cadwin
+					dreamed of song and road. He wandered as a bard, chasing old legends,
+					guided by a tutor who filled his ears with tales of elves and dwarves.
+					It was on such a journey to the haunted halls of Elenor’s
+					<b>Mount Tarman</b>
+					that Cadwin lost his teacher to the mountain’s wrath — a sorrow that
+					hardened him, though he still carried the lute more readily than the
+					sword.
+				</p>
+				<p>But fate had not yet struck its cruelest note.</p>
+				<hr />
+				<h3>🔥 The Night of Ashes</h3>
+				<p>
+					The Morrath tragedy did not come as open war, but as
+					<b>smoke upon the horizon</b>.
+				</p>
+				<p>
+					Pirates raided the eastern coast, and Lord Morrath — with his brother,
+					his heir, and loyal retainers — marched to defend a fishing village.
+					Bloodied, weary, and burdened with wounds, they returned victorious,
+					their ships creaking under the weight of loss.
+				</p>
+
+				<div id="region">
+					<div id="imageFrame">
+						<img style="width: 400px" src="./images/estate.jpg" />
+						<small>Fig: The Slaughter of House Morrath</small>
+					</div>
+					<p>
+						And then they saw it!!<br />
+						<br />
+						Their estate ablaze, towers choked in fire, banners curling into
+						black ash. The cries of servants and children drowned in the roar of
+						the inferno.
+					</p>
+				</div>
+				<p>
+					From the shadows, steel glimmered. Raiders — too many, too swift, too
+					well-armed to be mere bandits — fell upon them in ambush. The Morrath
+					men, already broken from battle, fought like lions… but none survived.
+					Lord Morrath, his brother, his son, and his household guard were all
+					cut down, their blood soaking the very soil they had ruled.
+				</p>
+				<p>By dawn, House Morrath was thought destroyed.</p>
+				<h3>🩸 The Survivors</h3>
+				<p>
+					Only three children escaped the slaughter: <br />Cadwin, absent on his
+					wanderings, spared by chance or by destiny.<br />His younger sister
+					and brother, sent months earlier to the academy in the Vornaki
+					capital, learning their letters and swordplay, far from fire and
+					steel.
+				</p>
+				<p>
+					It was whispered that fate was merciful. But in Vornak’s courts, the
+					whispers were crueler:
+					<i>
+						<blockquote>
+							“The bard lives, yet the house is ash. What can a singer do with a
+							lord’s land?”
+						</blockquote>
+					</i>
+				</p>
+				<h3>⚖️ The King’s Gambit</h3>
+				<div id="region">
+					<div id="imageFrame">
+						<img style="width: 400px" src="./images/whispers.png" />
+						<small>Fig: Whispers</small>
+					</div>
+					<p>
+						The rival houses circled like crows, urging the King to strip
+						Morrath’s name from the rolls and scatter its holdings among them.
+						<br />
+						<br />
+						<i>
+							“Cadwin is no lord,” they said. “He is a minstrel with soft hands.
+							His siblings are children. Give Morrath’s wealth to those who can
+							wield it for the realm.”
+						</i>
+					</p>
+				</div>
+
+				<p>
+					But the King was no fool. He saw daggers behind their words. Perhaps
+					he knew the Morrath tragedy was no mere pirate raid, but a plot rooted
+					in envy.
+				</p>
+				<div id="region">
+					<p>
+						So he denied the rivals. Instead, he sent Cadwin far south, beyond
+						their reach, and granted him a broken swamp domain called
+						<b>Hollowfen</b>. A barren land, half-drowned in fog, long
+						considered cursed — but a land nonetheless. <br /><br />
+						<i>
+							“Rebuild, Cadwin Morrath,” the King told him. “Prove your house is
+							not ash. The swamps defend those who endure them, and perhaps you
+							will find strength where others find only mud.”
+						</i>
+					</p>
+					<div id="imageFrame">
+						<img style="width: 300px" src="./images/Hallowfen.jpg" />
+						<small>Fig: Hallowfen</small>
+					</div>
+				</div>
+
+				<h3>🏹 A Bard Made Lord</h3>
+				<p>So began Cadwin’s tale.</p>
+				<p>
+					A bard with no taste for politics, thrust into the thorns of lordship.
+					A grieving son, burdened with vengeance yet unsure where truth lies. A
+					brother, sworn to protect the last of his blood .
+				</p>
+				<p>
+					In Hollowfen, Cadwin must raise villages from mire, train militias
+					from peasants, and carve strength from sorrow. By day, he is a lord;
+					by night, his lute sings laments of fire and steel.
+				</p>
+				<p>
+					But beneath it all lingers a darker verse: <br />
+					Who truly burned House Morrath? <br />
+					Was it pirates from across the sea, or the grasping hands of his
+					father’s rivals? <br />
+					And if Cadwin dares seek the truth, will it destroy him… or make him
+					more than a bard, more than a lord — perhaps the savior of Vornak?
+					<br />
+				</p>
+			</article>
+
+			<footer>
+				© The Legend of Nyvarra — Draft. Map image used for prototype only.
+			</footer>
+		</div>
+	</body>
+</html>
